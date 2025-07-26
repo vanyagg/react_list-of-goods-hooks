@@ -31,7 +31,7 @@ function getPreparedGoods(
 ) {
   const preparedGoods = [...goods];
 
-  if (sortField) {
+  if (sortField !== SortType.none) {
     preparedGoods.sort((good1, good2) => {
       if (sortField === SortType.length) {
         return good1.length - good2.length;
